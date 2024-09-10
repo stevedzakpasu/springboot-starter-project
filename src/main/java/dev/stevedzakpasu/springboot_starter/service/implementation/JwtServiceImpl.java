@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class JwtServiceImpl implements JwtService {
 
-  private static final String TOKEN_TYPE_CLAIM = "tokenType";
+  private static final String TOKEN_TYPE_CLAIM = "type";
 
   @Value("${jwt.secret}")
   private String secretKey;

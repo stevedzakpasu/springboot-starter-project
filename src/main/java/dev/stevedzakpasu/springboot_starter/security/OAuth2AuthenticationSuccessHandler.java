@@ -25,7 +25,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
       throws IOException {
     CustomOAuth2User oAuth2User = (CustomOAuth2User) authentication.getPrincipal();
     Map<String, Object> claims = new HashMap<>();
-    claims.put("tokenType", "LOGIN");
+    claims.put("type", "LOGIN");
 
     String token = jwtService.generateToken(claims, oAuth2User, LOGIN_TOKEN_EXPIRY);
 
